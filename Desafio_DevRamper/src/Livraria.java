@@ -75,7 +75,7 @@ public class Livraria {
 	 */
 	public void updateAllValues() {
 		this.readAllInputs(); backend.computeAll(books);
-		val_totalPrice.setText("R$ "+String.format("%.2f", backend.getTotalPrice())); val_desconto.setText(""+String.format("%.2f", backend.getDiscount())+"%");
+		val_totalPrice.setText("R$ "+String.format("%.2f", backend.getTotalPrice())); val_desconto.setText(""+String.format("%.2f", backend.getDiscount()*100)+"%");
 		val_valDesc.setText("- R$ "+String.format("%.2f", backend.getDiscountValue())); val_finalPrice.setText("R$ "+String.format("%.2f", backend.getFinalPrice()));
 	}
 	
